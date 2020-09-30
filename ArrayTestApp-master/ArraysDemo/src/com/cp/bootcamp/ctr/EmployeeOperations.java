@@ -26,16 +26,15 @@ public class EmployeeOperations {
 		return e;
 	}
 	
-	public Employee updateSalary(int percentage) {
+	public Employee updateSalary(String project,int percentage) {
 		
 		
 		for (int i = 0; i < index; i++) {
-			if(arr[i].getProject().equals("bank"))
+			if(arr[i].getProject().equals(project))
 			{
 				int x = arr[i].getSalary();
 				x += (x*percentage/100);
 				arr[i].setSalary(x);
-				System.out.println("increased by "+percentage+"%");
 				return arr[i];
 			}
 		}
