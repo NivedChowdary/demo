@@ -84,10 +84,11 @@ public class HRApp {
 		return operations.displayAllEmployees();
 	}
 	public Employee updateSalary() {
+		Scanner scan = new Scanner(System.in);
 		System.out.println("enter the project which you want to update salaries for");
-		String project = sc.next();
+		String project = scan.next();
 		System.out.println("give the percentage by which you want to update salary of employee");
-		int percentage = sc.nextInt();
+		int percentage = scan.nextInt();
 		return operations.updateSalary(project,percentage);
 		
 	}

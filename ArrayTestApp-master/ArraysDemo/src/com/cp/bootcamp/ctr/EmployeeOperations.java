@@ -35,7 +35,6 @@ public class EmployeeOperations {
 				int x = arr[i].getSalary();
 				x += (x*percentage/100);
 				arr[i].setSalary(x);
-				return arr[i];
 			}
 		}
 		
