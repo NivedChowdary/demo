@@ -13,6 +13,9 @@ public class EmployeeOperations {
 		arr[index++] = e;
 		return true;
 	}
+	public static int getIndex() {
+		return index;
+	}
 	
 	public Employee getEmployeeById(int id)
 	{
@@ -43,15 +46,9 @@ public class EmployeeOperations {
 		
 	}
 
-	public Employee displayAllEmployees() {
+	public Employee[] displayAllEmployeeso() {
 		
-		Employee e = null;
-		
-		for (int i = 0; i < index; i++) {
-			System.out.println( arr[i]);
-		}
-		
-		return e;
+		return arr;
 		
 	}
 }

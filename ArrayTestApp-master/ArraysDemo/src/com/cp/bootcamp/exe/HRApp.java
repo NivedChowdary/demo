@@ -79,9 +79,14 @@ public class HRApp {
 		System.out.println(" Employee Salary "+e.getSalary());
 		
 	}
-	public Employee displayAllEmployees() {
+	public void displayAllEmployees() {
 
-		return operations.displayAllEmployees();
+		Employee[] emps = operations.displayAllEmployeeso();
+		for(int i=0;i<operations.getIndex();i++) {
+			displayEmployeeDetails(emps[i]);	
+		}
+		
+		
 	}
 	public Employee updateSalary() {
 		Scanner scan = new Scanner(System.in);
