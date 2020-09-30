@@ -33,7 +33,8 @@ public class HRApp {
 				case 2: hrapp.searchEmployeeById();
 				break;
 				
-				case 3: hrapp.updateSalary(50000);
+				case 3: hrapp.updateSalary();
+				
 				
 				case 4: hrapp.displayAllEmployees();
 				break;
@@ -82,11 +83,11 @@ public class HRApp {
 
 		return operations.displayAllEmployees();
 	}
-	public Employee updateSalary(int amount) {
+	public Employee updateSalary() {
 		
-		
-		
-		return operations.updateSalary(amount);
+		System.out.println("give the percentage by which you want to update salary of employee");
+		int percentage = sc.nextInt();
+		return operations.updateSalary(percentage);
 		
 	}
 

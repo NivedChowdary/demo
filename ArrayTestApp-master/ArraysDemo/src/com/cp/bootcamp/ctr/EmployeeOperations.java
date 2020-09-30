@@ -1,5 +1,7 @@
 package com.cp.bootcamp.ctr;
 
+import java.util.Scanner;
+
 import com.cp.bootcamp.bean.Employee;
 
 public class EmployeeOperations {
@@ -24,14 +26,17 @@ public class EmployeeOperations {
 		return e;
 	}
 	
-	public Employee updateSalary(int e) {
+	public Employee updateSalary(int percentage) {
+		
 		
 		for (int i = 0; i < index; i++) {
 			if(arr[i].getProject().equals("bank"))
 			{
 				int x = arr[i].getSalary();
-				int y = x+e;
-				arr[i].setSalary(y);
+				x += (x*percentage/100);
+				arr[i].setSalary(x);
+				System.out.println("increased by "+percentage+"%");
+				return arr[i];
 			}
 		}
 		
